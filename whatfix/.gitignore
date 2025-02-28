@@ -1,0 +1,6 @@
+## data files - large in size
+amazon_data_processed/cell_phone/
+
+##model checkpoints
+model_checkpoints
+model_best.ckpt
