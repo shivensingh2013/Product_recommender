@@ -108,7 +108,7 @@ class ParagraphVectorCorruption(nn.Module):
         corr_review_vector = corr_review_vector.view(-1, embedding_size, 1)
 
         #for each target word, there is k words negative sampling
-        vocab_size = word_embeddings.weight.size() - 1
+        vocab_size = self.word_embeddings.weight.size() - 1
         #compute the loss of review generating positive and negative words
         neg_sample_idxs = torch.multinomial(self.word_dists, batch_size * pv_window_size * n_negs, replacement=True)
         neg_sample_emb = self.word_embeddings(neg_sample_idxs)
