@@ -8,7 +8,7 @@ wget -O meta.gz http://snap.stanford.edu/data/amazon/productGraph/categoryFiles/
 # Remove stop words and preprocess data
 java -Xmx4g -jar "./amazon_data_processed/code/utils/AmazonDataset/jar/AmazonReviewData_preprocess.jar" false "C:/Users/IHG6KOR/Desktop/shiv/Portfolio/Job_related/whatfix/processed_data/cell_phone/review.gz" "C:/Users/IHG6KOR/Desktop/shiv/Portfolio/Job_related/whatfix/processed_data/cell_phone/preprocessed_data.gz"
 
-# Indexing the dataset
+# Indexing the dataset -  generate the review list sorted by time
 python "./amazon_data_processed/code/utils/AmazonDataset/index_and_filter_review_file.py" "./cell_phone/preprocessed_data.gz" "./cell_phone/temp_data/" 5
 
 # Matching the meta data with indexed data
